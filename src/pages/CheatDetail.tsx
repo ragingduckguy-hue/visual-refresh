@@ -13,7 +13,7 @@ const CheatDetail = () => {
 
   if (!cheat) return <Navigate to="/cheats" replace />;
 
-  const Logo = cheat.logo;
+  const logoSrc = cheat.logoSrc;
   const isOperational = cheat.status === "operational";
 
   return (
