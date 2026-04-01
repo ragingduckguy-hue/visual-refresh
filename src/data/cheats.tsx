@@ -1,37 +1,43 @@
 import { type LucideIcon } from "lucide-react";
 import { Zap, Shield, Bot, Brain, Gamepad2, Globe } from "lucide-react";
 
-const XBrandLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
-  <div className={`${className} rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center`}>
-    <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5">
-      <path d="M6 6L18 18M18 6L6 18" stroke="hsl(265, 85%, 70%)" strokeWidth="2.5" strokeLinecap="round"/>
-    </svg>
+/* ── Blooket "B" logo ── */
+const BlooketLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
+  <div className={`${className} rounded-xl flex items-center justify-center overflow-hidden`}
+       style={{ background: "linear-gradient(135deg, #2bc4e8, #0a84ff)" }}>
+    <span className="text-white font-black text-lg leading-none" style={{ fontFamily: "system-ui" }}>B</span>
   </div>
 );
 
+/* ── Kahoot "K!" logo ── */
 const KahootLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
-  <div className={`${className} rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center`}>
-    <span className="text-sm font-black text-primary">K!</span>
+  <div className={`${className} rounded-xl flex items-center justify-center overflow-hidden`}
+       style={{ background: "#46178f" }}>
+    <span className="text-white font-black text-sm leading-none">K!</span>
   </div>
 );
 
+/* ── Quizizz "Q" logo ── */
 const QuizizzLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
-  <div className={`${className} rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center`}>
-    <span className="text-base font-black text-primary">Q</span>
+  <div className={`${className} rounded-xl flex items-center justify-center overflow-hidden`}
+       style={{ background: "#8854c0" }}>
+    <span className="text-white font-black text-base leading-none">Q</span>
   </div>
 );
 
+/* ── IXL logo ── */
 const IXLLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
-  <div className={`${className} rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center`}>
-    <span className="text-[10px] font-black text-primary tracking-tight">IXL</span>
+  <div className={`${className} rounded-xl flex items-center justify-center overflow-hidden`}
+       style={{ background: "linear-gradient(135deg, #00b050, #009e47)" }}>
+    <span className="text-white font-black text-[10px] tracking-tight leading-none">IXL</span>
   </div>
 );
 
+/* ── Wayground "W" logo ── */
 const WaygroundLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
-  <div className={`${className} rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center`}>
-    <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5">
-      <path d="M4 16L8 8L12 13L16 5L20 16" stroke="hsl(265, 85%, 70%)" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>
+  <div className={`${className} rounded-xl flex items-center justify-center overflow-hidden`}
+       style={{ background: "linear-gradient(135deg, #ff6b35, #f7931e)" }}>
+    <span className="text-white font-black text-base leading-none">W</span>
   </div>
 );
 
@@ -76,7 +82,7 @@ export const cheats: CheatData[] = [
     features: ["Token Generator", "Blook Unlocker", "Game Scripts", "Auto Farm"],
     status: "operational",
     icon: Gamepad2,
-    logo: XBrandLogo,
+    logo: BlooketLogo,
     version: "7.0",
     platform: "Browser Console / Bookmarklet",
     requirements: ["Any modern browser", "Access to browser console (F12)", "Active Blooket session"],
@@ -91,7 +97,7 @@ export const cheats: CheatData[] = [
     features: ["Auto Play", "Token Farm", "Silent Mode", "Background Running"],
     status: "operational",
     icon: Zap,
-    logo: XBrandLogo,
+    logo: BlooketLogo,
     version: "1.0",
     platform: "Website",
     requirements: ["Node.js 18+", "npm or yarn", "Blooket account credentials"],
