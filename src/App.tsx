@@ -10,6 +10,8 @@ import Cheats from "./pages/Cheats";
 import Status from "./pages/Status";
 import Credits from "./pages/Credits";
 import CheatDetail from "./pages/CheatDetail";
+import TermsOfService from "./pages/TermsOfService";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
