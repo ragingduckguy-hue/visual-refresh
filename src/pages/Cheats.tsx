@@ -62,6 +62,7 @@ const Cheats = () => {
         >
           {filtered.map((c) => {
             const isOnline = c.status === "operational";
+            const Logo = c.logo;
             return (
               <motion.div
                 key={c.slug}
@@ -75,9 +76,16 @@ const Cheats = () => {
                   className="group block glass-card-hover p-6 relative overflow-hidden h-full flex flex-col"
                 >
                   <div className="flex-1">
-                    {/* Game name first, then tool name */}
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-[11px] font-mono text-primary/60 uppercase tracking-widest">{c.game}</span>
+                      <div className="flex items-center gap-3">
+                        <Logo className="w-10 h-10" />
+                        <div>
+                          <span className="text-[11px] font-mono text-primary/60 uppercase tracking-widest">{c.game}</span>
+                          <h3 className="font-display text-xl font-bold text-foreground tracking-tight mb-0 group-hover:text-primary transition-colors duration-300">
+                            {c.tool}
+                          </h3>
+                        </div>
+                      </div>
                       <div className={`flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider ${
                         isOnline ? "bg-success/10 text-success" : "bg-warning/10 text-warning"
                       }`}>
