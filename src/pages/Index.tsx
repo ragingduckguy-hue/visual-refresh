@@ -695,9 +695,9 @@ const Index = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="relative overflow-hidden rounded-3xl border border-glass-border bg-gradient-to-br from-card/80 via-card/60 to-primary/5 p-12 md:p-16 text-center"
           >
-            <div className="absolute inset-0 rounded-3xl gradient-border" />
-            <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-              <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-scan" />
+            {/* Subtle top glow — positioned above card content, not overlapping */}
+            <div className="absolute inset-x-0 -top-8 z-0 flex justify-center pointer-events-none">
+              <div className="h-16 w-[60%] rounded-[999px] bg-gradient-to-r from-transparent via-primary/20 to-transparent blur-2xl" />
             </div>
 
             <motion.div
