@@ -564,7 +564,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {cheats.map((cheat, i) => {
               const isOnline = cheat.status === "operational";
-              const Logo = cheat.logo;
+              const logoSrc = cheat.logoSrc;
               return (
                 <motion.div
                   key={cheat.slug}
@@ -579,7 +579,7 @@ const Index = () => {
                   >
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-3">
-                        <Logo className="w-10 h-10" />
+                        <img src={logoSrc} alt={`${cheat.game} logo`} className="w-10 h-10 rounded-lg object-cover shadow-md" />
                         <div>
                           <span className="text-[10px] font-mono text-primary/60 uppercase tracking-widest block mb-1">
                             {cheat.game}
@@ -695,9 +695,9 @@ const Index = () => {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="relative overflow-hidden rounded-3xl border border-glass-border bg-gradient-to-br from-card/80 via-card/60 to-primary/5 p-12 md:p-16 text-center"
           >
-            <div className="absolute inset-0 rounded-3xl gradient-border" />
-            <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-              <div className="w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-scan" />
+            {/* Subtle top glow — positioned above card content, not overlapping */}
+            <div className="absolute inset-x-0 -top-8 z-0 flex justify-center pointer-events-none">
+              <div className="h-16 w-[60%] rounded-[999px] bg-gradient-to-r from-transparent via-primary/20 to-transparent blur-2xl" />
             </div>
 
             <motion.div

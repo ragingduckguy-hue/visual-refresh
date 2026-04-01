@@ -62,7 +62,7 @@ const Cheats = () => {
         >
           {filtered.map((c) => {
             const isOnline = c.status === "operational";
-            const Logo = c.logo;
+            const logoSrc = c.logoSrc;
             const Icon = c.icon;
             return (
               <motion.div
@@ -82,9 +82,7 @@ const Cheats = () => {
                   <div className="p-6 flex-1 flex flex-col">
                     {/* Header row: Logo + info + status */}
                     <div className="flex items-start gap-4 mb-4">
-                      <div className="shrink-0 rounded-xl shadow-lg ring-1 ring-white/5">
-                        <Logo className="w-12 h-12" />
-                      </div>
+                      <img src={c.logoSrc} alt={`${c.game} logo`} className="w-12 h-12 rounded-xl object-cover shrink-0 shadow-lg" />
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2 mb-0.5">
                           <span className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">{c.game}</span>

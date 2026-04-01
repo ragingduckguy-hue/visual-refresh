@@ -1,45 +1,11 @@
 import { type LucideIcon } from "lucide-react";
 import { Zap, Shield, Bot, Brain, Gamepad2, Globe } from "lucide-react";
 
-/* ── Blooket "B" logo ── */
-const BlooketLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
-  <div className={`${className} rounded-xl flex items-center justify-center overflow-hidden`}
-       style={{ background: "linear-gradient(135deg, #2bc4e8, #0a84ff)" }}>
-    <span className="text-white font-black text-lg leading-none" style={{ fontFamily: "system-ui" }}>B</span>
-  </div>
-);
-
-/* ── Kahoot "K!" logo ── */
-const KahootLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
-  <div className={`${className} rounded-xl flex items-center justify-center overflow-hidden`}
-       style={{ background: "#46178f" }}>
-    <span className="text-white font-black text-sm leading-none">K!</span>
-  </div>
-);
-
-/* ── Quizizz "Q" logo ── */
-const QuizizzLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
-  <div className={`${className} rounded-xl flex items-center justify-center overflow-hidden`}
-       style={{ background: "#8854c0" }}>
-    <span className="text-white font-black text-base leading-none">Q</span>
-  </div>
-);
-
-/* ── IXL logo ── */
-const IXLLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
-  <div className={`${className} rounded-xl flex items-center justify-center overflow-hidden`}
-       style={{ background: "linear-gradient(135deg, #00b050, #009e47)" }}>
-    <span className="text-white font-black text-[10px] tracking-tight leading-none">IXL</span>
-  </div>
-);
-
-/* ── Wayground "W" logo ── */
-const WaygroundLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
-  <div className={`${className} rounded-xl flex items-center justify-center overflow-hidden`}
-       style={{ background: "linear-gradient(135deg, #ff6b35, #f7931e)" }}>
-    <span className="text-white font-black text-base leading-none">W</span>
-  </div>
-);
+import logoKahoot from "@/assets/logo-kahoot.png";
+import logoBlooket from "@/assets/logo-blooket.png";
+import logoQuizizz from "@/assets/logo-quizizz.png";
+import logoIXL from "@/assets/logo-ixl.png";
+import logoWayground from "@/assets/logo-wayground.png";
 
 export interface CheatData {
   slug: string;
@@ -50,7 +16,7 @@ export interface CheatData {
   features: string[];
   status: "operational" | "maintenance" | "N/A";
   icon: LucideIcon;
-  logo: React.FC<{ className?: string }>;
+  logoSrc: string;
   version: string;
   platform: string;
   requirements: string[];
@@ -67,7 +33,7 @@ export const cheats: CheatData[] = [
     features: ["Bot Flooding", "Auto Answer", "Script Support"],
     status: "operational",
     icon: Bot,
-    logo: KahootLogo,
+    logoSrc: logoKahoot,
     version: "0.1",
     platform: "Website",
     requirements: ["Chrome / Firefox / Edge", "Tampermonkey or Violentmonkey", "Active Kahoot session"],
@@ -82,7 +48,7 @@ export const cheats: CheatData[] = [
     features: ["Token Generator", "Blook Unlocker", "Game Scripts", "Auto Farm"],
     status: "operational",
     icon: Gamepad2,
-    logo: BlooketLogo,
+    logoSrc: logoBlooket,
     version: "7.0",
     platform: "Browser Console / Bookmarklet",
     requirements: ["Any modern browser", "Access to browser console (F12)", "Active Blooket session"],
@@ -97,7 +63,7 @@ export const cheats: CheatData[] = [
     features: ["Auto Play", "Token Farm", "Silent Mode", "Background Running"],
     status: "operational",
     icon: Zap,
-    logo: BlooketLogo,
+    logoSrc: logoBlooket,
     version: "1.0",
     platform: "Website",
     requirements: ["Node.js 18+", "npm or yarn", "Blooket account credentials"],
@@ -112,7 +78,7 @@ export const cheats: CheatData[] = [
     features: ["Live Answers", "Auto Complete", "Stealth Mode"],
     status: "operational",
     icon: Brain,
-    logo: QuizizzLogo,
+    logoSrc: logoQuizizz,
     version: "1.0",
     platform: "Browser Extension",
     requirements: ["Chrome or Firefox", "QuizWare extension installed", "Active Quizizz session"],
@@ -127,7 +93,7 @@ export const cheats: CheatData[] = [
     features: ["Kick Player", "Start/End Game", "Game Crash", "Modify Powerups", "Become Host"],
     status: "maintenance",
     icon: Globe,
-    logo: WaygroundLogo,
+    logoSrc: logoWayground,
     version: "0.1",
     platform: "Tampermonkey Script",
     requirements: ["Chrome / Firefox / Edge", "Tampermonkey", "Wayground account"],
@@ -142,7 +108,7 @@ export const cheats: CheatData[] = [
     features: ["Auto Solve", "Multi-Subject", "Score Control"],
     status: "operational",
     icon: Shield,
-    logo: IXLLogo,
+    logoSrc: logoIXL,
     version: "0.1",
     platform: "Browser Extension / Console",
     requirements: ["Any modern browser", "IXL account with active subscription", "Browser extension or console access"],
