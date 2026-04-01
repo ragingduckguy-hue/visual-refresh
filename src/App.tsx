@@ -26,6 +26,8 @@ const AnimatedRoutes = () => {
         <Route path="/cheats/:slug" element={<CheatDetail />} />
         <Route path="/status" element={<Status />} />
         <Route path="/credits" element={<Credits />} />
+        <Route path="/terms" element={<TermsOfService />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
