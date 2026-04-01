@@ -62,7 +62,7 @@ const Cheats = () => {
         >
           {filtered.map((c) => {
             const isOnline = c.status === "operational";
-            const Logo = c.logo;
+            const logoSrc = c.logoSrc;
             const Icon = c.icon;
             return (
               <motion.div

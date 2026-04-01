@@ -48,7 +48,7 @@ const CheatDetail = () => {
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.2, type: "spring", bounce: 0.3 }}
               >
-                <Logo className="w-20 h-20" />
+                <img src={logoSrc} alt={`${cheat.game} logo`} className="w-20 h-20 rounded-2xl object-cover shadow-lg" />
               </motion.div>
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-3 flex-wrap">

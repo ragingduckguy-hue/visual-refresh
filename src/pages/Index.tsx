@@ -579,7 +579,7 @@ const Index = () => {
                   >
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-3">
-                        <Logo className="w-10 h-10" />
+                        <img src={logoSrc} alt={`${cheat.game} logo`} className="w-10 h-10 rounded-lg object-cover shadow-md" />
                         <div>
                           <span className="text-[10px] font-mono text-primary/60 uppercase tracking-widest block mb-1">
                             {cheat.game}
