@@ -564,7 +564,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {cheats.map((cheat, i) => {
               const isOnline = cheat.status === "operational";
-              const Logo = cheat.logo;
+              const logoSrc = cheat.logoSrc;
               return (
                 <motion.div
                   key={cheat.slug}
