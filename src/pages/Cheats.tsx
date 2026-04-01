@@ -93,9 +93,6 @@ const Cheats = () => {
                         {isOnline ? "Online" : "Maintenance"}
                       </div>
                     </div>
-                    <h3 className="font-display text-xl font-bold text-foreground tracking-tight mb-2 group-hover:text-primary transition-colors duration-300">
-                      {c.tool}
-                    </h3>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-4">{c.desc}</p>
                     <div className="flex flex-wrap gap-1.5">
                       {c.features.slice(0, 4).map((f) => (
